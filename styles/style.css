@@ -39,6 +39,7 @@
     font-weight: 600;
     font-size: 1.25rem;
     border: none;
+    outline: none;
 }
 
 
@@ -130,7 +131,7 @@ main > section {
     margin-bottom: 50px;
 }
 
-/* Team and feature related styles */
+/* Team section related styles */
 
 .teams {
     align-items: center;
@@ -143,30 +144,126 @@ main > section {
     gap: 24px;
 }
 
-.our-features {
+.teams-content {
     max-width: 530px;
 }
 
+/* feature section related styles */
 
+.features {
+    gap: 145px;
+}
+
+.feature-card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #131313;
+}
+
+.feature-card-description {
+    line-height: 26px;
+    color: #727272;
+}
+
+.feature-content {
+    flex-basis: calc(48% - 145px);
+}
+
+.feature-content .section-title {
+    padding-left: 20px;
+    border-left: 5px solid #FF900E;
+}
+
+.feature-card-container {
+    gap: 30px;
+    flex-direction: column;
+}
+
+.feature-card {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.06);
+}
+
+.architect-img {
+    position: relative;
+    flex-basis: 52%;
+    height: fit-content;
+}
+
+.architect-img img {
+    width: 100%;
+    height: auto;
+}
+
+.architect-img button {
+    position: absolute;
+    bottom: -6.5%;
+    left: -10.5%;
+    padding: 45px 42px;
+}
+
+#experience-time {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 70px;
+}
+
+#experience {
+    font-size: 1.5625rem;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+/* tablet */
 
 @media screen and (max-width: 992px) {
-    .teams {
-        flex-direction: column;
-    }
-
     .btn-primary {
         padding: 15px 20px;
         font-size: 1rem;
     }
+    .teams {
+        flex-direction: column-reverse;
+        align-items: normal;
+    }
+
+    .team-img-container img {
+        width: 100%;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .architect-img {
+        text-align: center;
+    }
+
+    .architect-img, .architect-img button {
+        position: static;
+    }
+
+    .architect-img button {
+        padding: 15px 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    } 
+
+    #experience-time {
+        font-size: 3rem;
+    }
+
+    #experience {
+        font-size: 1.25rem;
+    }
 }
+
+/* mobile */
 
 @media screen and (max-width: 576px) {
     main > section {
         margin-top: 70px;
     }
-
-
-
 
     .navbar, .teams {
         flex-direction: column;
@@ -191,9 +288,5 @@ main > section {
 
     .team-img-container {
         grid-template-columns: 1fr;
-    }
-
-    .team-img-container img {
-        width: 100%;
     }
 }
