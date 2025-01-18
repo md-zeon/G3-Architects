@@ -251,6 +251,29 @@ main > section {
     color: #727272;
 }
 
+/* sponsors related styles */
+
+.sponsors {
+    text-align: center;
+}
+
+.sponsors .sponsor-info {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.sponsors-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin: 100px auto;
+    justify-content: center;
+}
+
+.sponsors-container img {
+    filter: grayscale(100%);
+    width: 100%;
+}
+
 /* tablet */
 
 @media screen and (max-width: 992px) {
@@ -297,6 +320,11 @@ main > section {
         grid-template-columns: repeat(2, 250px);
         gap: 50px;
     }
+
+    .sponsors-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+    }
 }
 
 /* mobile */
@@ -334,5 +362,10 @@ main > section {
     .fact-card-container {
         grid-template-columns: 250px;
         gap: 50px;
+    }
+    
+    .sponsors-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
     }
 }
